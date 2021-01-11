@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import CurrencyRow from './CurrencyRow';
+import CachedIcon from '@material-ui/icons/Cached';
+import {Button} from '@material-ui/core';
 
 const BASE_URL = "https://api.exchangeratesapi.io/latest"
 
@@ -51,10 +53,19 @@ function App() {
     setAmountInFromCurrency(false)
   }
 
+  function switchPlace() {
+    let temp = fromCurrency
+    setFromCurrency(toCurrency)
+    setToCurrency(temp)
+  }
+
   return (
     <>
     
     <div className="main-container">
+      {/* <Typography variant="h4" component="h2" gutterBottom>
+        <strong>Convert Your Currency</strong>
+      </Typography> */}
       <h1>Convert Your Currency</h1>
       <br/>
       <CurrencyRow
@@ -64,7 +75,9 @@ function App() {
         onChangeAmount={handleFromAmountChange}
         amount={fromAmount}
       />
-      <div className="equals">Converted To</div>  
+      <div className="equals">Converted To
+        <Button variant="contained" color="primary" className="switch" onClick={switchPlace}><CachedIcon/></Button>
+      </div>  
       <CurrencyRow 
         currencyOptions={currencyOptions}
         selectedCurrency={toCurrency}

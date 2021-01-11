@@ -29,9 +29,12 @@ select {
 }
 
 .equals {
+    display: flex;
+    align-items: center;
+    align-content: center;
     font-weight: bold;
-    font-size: 1rem;
-    margin: 3px;
+    font-size: .9rem;
+    margin: 5px;
     padding: 8px;
 }
 
@@ -44,4 +47,12 @@ select {
 
 .option {
     padding: 2px;
+}
+
+.switch {
+    padding: 5px !important;
+    border-radius: 20%;
+    margin-left: 36% !important;
+    position: absolute !important;
+    min-width: 6vh !important;
 }
