@@ -25,8 +25,6 @@ function App() {
     fetch(BASE_URL)
       .then(res => res.json())
       .then(data => {
-        // console.log(data.base);
-        // console.log(...Object.keys(data.rates));
         const firstCurrency = Object.keys(data.rates)[0]
         setCurrencyOptions([data.base, ...Object.keys(data.rates)])
         setFromCurrency(data.base) // EUR
@@ -37,10 +35,7 @@ function App() {
   
   useEffect(() => {
     if (fromCurrency != null && toCurrency != null) {
-      // if(fromCurrency == toCurrency) {
-      //   fromAmount = toAmount = 0
-      // }
-      // else {}
+
       fetch(`${BASE_URL}?base=${fromCurrency}`)
         .then(res => res.json())
         .then(data => setExchangeRate(data.rates[toCurrency]))
