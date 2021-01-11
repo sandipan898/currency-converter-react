@@ -4,6 +4,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     text-align: center;
+    background-color: #18da28;
 }
 
 h1 {
@@ -25,4 +26,8 @@ select {
 .equals {
     font-weight: bold;
     font-size: 2rem;
+}
+
+.main-container {
+    border-radius: 10%;
 }

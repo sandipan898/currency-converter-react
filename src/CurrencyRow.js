@@ -1,6 +1,5 @@
 import React from 'react'
-import TextField from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
+import {TextField} from '@material-ui/core';
 
 export default function CurrencyRow(props) {
     const {
@@ -19,7 +18,11 @@ export default function CurrencyRow(props) {
                 {currencyOptions.map(option => (                    
                     <option key={option} value={option}>{option}</option>
                 ))}
-            </select> */}
+            </select> 
+            // <MenuItem key={option} value={option}>
+            //     {option}
+            // </MenuItem>
+            */}
             <TextField
                 id="outlined-select-currency"
                 select
@@ -30,9 +33,12 @@ export default function CurrencyRow(props) {
                 variant="outlined"
             >
                 {currencies.map((option) => (
-                    <MenuItem key={option} value={option}>
-                        {option}
-                    </MenuItem>
+                    
+                    <select value={selectedCurrency} onChange={onChangeCurrency}>
+                    {currencyOptions.map(option => (                    
+                        <option key={option} value={option}>{option}</option>
+                    ))}
+                </select>
                 ))}
             </TextField>
         </div>

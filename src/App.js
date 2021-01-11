@@ -57,7 +57,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="main-container">
       <h1>Convert</h1>
       <CurrencyRow
         currencyOptions={currencyOptions}
@@ -74,7 +74,7 @@ function App() {
         onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
-    </>
+    </div>
   );
 }
 
