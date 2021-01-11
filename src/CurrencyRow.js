@@ -23,15 +23,6 @@ export default function CurrencyRow(props) {
             //     {option}
             // </MenuItem>
             */}
-            <TextField
-                id="outlined-select-currency"
-                select
-                label="Select"
-                value={selectedCurrency}
-                onChange={onChangeCurrency}
-                helperText="Select your currency"
-                variant="outlined"
-            >
                 {currencies.map((option) => (
                     
                     <select value={selectedCurrency} onChange={onChangeCurrency}>
@@ -40,7 +31,6 @@ export default function CurrencyRow(props) {
                     ))}
                 </select>
                 ))}
-            </TextField>
         </div>
     )
 }
