@@ -4,7 +4,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     text-align: center;
-    background-color: #18da28;
+    background-color: #989d97e2;
 }
 
 h1 {
@@ -20,14 +20,28 @@ h1 {
 }
 
 select {
-    margin-left: .7rem;
+    margin: .5rem;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    background-color: #b7cae2;
 }
 
 .equals {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1rem;
+    margin: 3px;
+    padding: 8px;
 }
 
 .main-container {
-    border-radius: 10%;
+    border-radius: 5%;
+    background-color: #e2e2e2;
+    margin-top: 20%;
+    padding: 30px;
+}
+
+.option {
+    padding: 2px;
 }

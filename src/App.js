@@ -57,8 +57,11 @@ function App() {
   }
 
   return (
+    <>
+    
     <div className="main-container">
-      <h1>Convert</h1>
+      <h1>Convert Your Currency</h1>
+      <br/>
       <CurrencyRow
         currencyOptions={currencyOptions}
         selectedCurrency={fromCurrency}
@@ -66,7 +69,7 @@ function App() {
         onChangeAmount={handleFromAmountChange}
         amount={fromAmount}
       />
-      <div className="equals">=</div>  
+      <div className="equals">Converted To</div>  
       <CurrencyRow 
         currencyOptions={currencyOptions}
         selectedCurrency={toCurrency}
@@ -75,6 +78,7 @@ function App() {
         amount={toAmount}
       />
     </div>
+    </>
   );
 }
 
