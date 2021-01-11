@@ -50,9 +50,8 @@ select {
 }
 
 .switch {
-    padding: 5px !important;
-    border-radius: 20%;
-    margin-left: 36% !important;
-    position: absolute !important;
-    min-width: 6vh !important;
+    padding: 2px !important;
+    margin-left: 55% !important;
+    position: relative !important;
+    min-width: 5vh !important;
 }
